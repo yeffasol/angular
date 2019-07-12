@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {NewServiceService} from '../new-service.service';
 
 @Component({
   selector: 'app-date',
@@ -6,9 +7,23 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./date.component.css']
 })
 export class DateComponent implements OnInit {
-  message: string = 'world';
+  message: string;
+  items = ['Angular', 'React', 'Vue.js', 'Bootstrap'];
+  loggedIn = true;
+  loggedout = 'login';
+  text: string = 'a table';
 
-  constructor() {
+  constructor(svc: NewServiceService) {
+    svc.consoleText('text from service');
+    const setTime = () => {
+      return this.message = new Date().toLocaleTimeString();
+    };
+
+    setInterval(setTime, 1000);
+  }
+
+  myEvent(event) {
+    console.log(this.text);
   }
 
   ngOnInit() {

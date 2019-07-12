@@ -1,1 +1,44 @@
-<p>hello {{message}}</p>
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/">Главная</a>
+    </li>
+  </ul>
+</nav>
+<app-some></app-some>
+<p>Time: {{message}}</p>
+<ol>
+  <li *ngFor="let item of items">{{item}}</li>
+</ol>
+
+<div *ngIf="loggedIn; else loggedOut">
+  logged in.
+</div>
+
+<ng-template #loggedOut>
+  Please {{loggedout}}
+</ng-template>
+
+
+<button (click)="myEvent($event)">click</button>
+
+<input type="text" [(ngModel)]="text">
+<p>{{text}}</p>
