@@ -1,11 +1,6 @@
 :root {
   --grid: 3;
   --size: 100px;
-  --transform: translate(0);
-}
-
-label{
-  color: rebeccapurple;
 }
 
 html,
@@ -14,20 +9,18 @@ body {
 }
 
 .field {
-  height: 500px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
-
 .field__row {
   display: grid;
   grid-template-columns: repeat(var(--grid), var(--size));
   grid-template-rows: repeat(var(--grid), var(--size));
   border: 1px solid #000;
 }
-
 .field__item {
   display: flex;
   justify-content: center;
@@ -35,26 +28,19 @@ body {
   font-weight: 800;
   border: 1px solid #000;
 }
-
-.field__item.start{
-  background-color: green;
-}
-
-.field__item.end{
-  background-color: red;
-}
-
 .field__point {
   position: relative;
   width: 30px;
   height: 30px;
+  background-color: #000;
   transition: -webkit-transform 1s linear;
   transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+  -webkit-transform: var(--transform);
   transform: var(--transform);
   border-radius: 100%;
-  background-color: rebeccapurple;
+  background-color: red;
 }
-
 .field__point:after {
   content: "";
   position: absolute;
@@ -63,7 +49,8 @@ body {
   height: 0;
   top: -18px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   border: 15px solid transparent;
-  border-bottom-color: rebeccapurple;
+  border-bottom-color: red;
 }

@@ -7,6 +7,7 @@ import {DateComponent} from './date/date.component';
 import {FormsModule} from '@angular/forms';
 import {GameComponent} from './game/game.component';
 import {NewServiceService} from './new-service.service';
+import { FieldComponent } from './field/field.component';
 const appRoutes: Routes = [
   {path: '', component: GameComponent},
   {path: 'date', component: DateComponent},
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
     AppComponent,
     SomeComponent,
     DateComponent,
-    GameComponent
+    GameComponent,
+    FieldComponent
   ],
   imports: [
     BrowserModule,
