@@ -299,7 +299,7 @@ var FieldComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":root {\r\n  --grid: 3;\r\n  --size: 80px;\r\n  --transform: translate(0);\r\n}\r\n\r\nlabel{\r\n  color: rebeccapurple;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n.center{\r\n  position: relative;\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n}\r\n\r\n.show{\r\n  font-size: 18px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.wrapper{\r\n  display: -webkit-box;\r\n  display: flex;\r\n  padding-top: 50px;\r\n  margin-left: -20px;\r\n}\r\n\r\n.wrapper__item{\r\n  margin-left: 20px;\r\n}\r\n\r\n.field {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.field__row {\r\n  display: grid;\r\n  width: 500px;\r\n  grid-template-columns: repeat(var(--grid), var(--size));\r\n  grid-template-rows: repeat(var(--grid), var(--size));\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.field__item {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  font-weight: 800;\r\n  border: 1px solid #000;\r\n  color: #000000;\r\n}\r\n\r\n.field__item.start{\r\n  background-color: green;\r\n}\r\n\r\n.field__item.end{\r\n  background-color: red;\r\n}\r\n\r\n.field__point {\r\n  position: relative;\r\n  width: 30px;\r\n  height: 30px;\r\n  transition: -webkit-transform 1s linear;\r\n  -webkit-transition: -webkit-transform 1s linear;\r\n  transition: transform 1s linear;\r\n  transition: transform 1s linear, -webkit-transform 1s linear;\r\n  -webkit-transform: var(--transform);\r\n          transform: var(--transform);\r\n  border-radius: 100%;\r\n  background-color: rebeccapurple;\r\n}\r\n\r\n.field__point:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  display: block;\r\n  width: 0;\r\n  height: 0;\r\n  top: -18px;\r\n  left: 50%;\r\n  -webkit-transform: translateX(-50%);\r\n          transform: translateX(-50%);\r\n  border: 15px solid transparent;\r\n  border-bottom-color: rebeccapurple;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1QsWUFBWTtFQUNaLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLG9CQUFvQjtBQUN0Qjs7QUFFQTs7RUFFRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQWE7RUFBYixhQUFhO0VBQ2Isd0JBQXVCO1VBQXZCLHVCQUF1QjtFQUN2Qiw0QkFBc0I7RUFBdEIsNkJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0Qix5QkFBbUI7VUFBbkIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLG9CQUFhO0VBQWIsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxvQkFBYTtFQUFiLGFBQWE7RUFDYix3QkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLHlCQUFtQjtVQUFuQixtQkFBbUI7RUFDbkIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLFlBQVk7RUFDWix1REFBdUQ7RUFDdkQsb0RBQW9EO0VBQ3BELHdCQUF1QjtVQUF2Qix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxvQkFBYTtFQUFiLGFBQWE7RUFDYix3QkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLHlCQUFtQjtVQUFuQixtQkFBbUI7RUFDbkIsZ0JBQWdCO0VBQ2hCLHNCQUFzQjtFQUN0QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFdBQVc7RUFDWCxZQUFZO0VBQ1osdUNBQXVDO0VBQ3ZDLCtDQUErQjtFQUEvQiwrQkFBK0I7RUFBL0IsNERBQStCO0VBQy9CLG1DQUEyQjtVQUEzQiwyQkFBMkI7RUFDM0IsbUJBQW1CO0VBQ25CLCtCQUErQjtBQUNqQzs7QUFFQTtFQUNFLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsY0FBYztFQUNkLFFBQVE7RUFDUixTQUFTO0VBQ1QsVUFBVTtFQUNWLFNBQVM7RUFDVCxtQ0FBMkI7VUFBM0IsMkJBQTJCO0VBQzNCLDhCQUE4QjtFQUM5QixrQ0FBa0M7QUFDcEMiLCJmaWxlIjoic3JjL2FwcC9nYW1lL2dhbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIjpyb290IHtcclxuICAtLWdyaWQ6IDM7XHJcbiAgLS1zaXplOiA4MHB4O1xyXG4gIC0tdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCk7XHJcbn1cclxuXHJcbmxhYmVse1xyXG4gIGNvbG9yOiByZWJlY2NhcHVycGxlO1xyXG59XHJcblxyXG5odG1sLFxyXG5ib2R5IHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbi5jZW50ZXJ7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG59XHJcblxyXG4uc2hvd3tcclxuICBmb250LXNpemU6IDE4cHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxufVxyXG5cclxuLndyYXBwZXJ7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBwYWRkaW5nLXRvcDogNTBweDtcclxuICBtYXJnaW4tbGVmdDogLTIwcHg7XHJcbn1cclxuXHJcbi53cmFwcGVyX19pdGVte1xyXG4gIG1hcmdpbi1sZWZ0OiAyMHB4O1xyXG59XHJcblxyXG4uZmllbGQge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xyXG59XHJcblxyXG4uZmllbGRfX3JvdyB7XHJcbiAgZGlzcGxheTogZ3JpZDtcclxuICB3aWR0aDogNTAwcHg7XHJcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQodmFyKC0tZ3JpZCksIHZhcigtLXNpemUpKTtcclxuICBncmlkLXRlbXBsYXRlLXJvd3M6IHJlcGVhdCh2YXIoLS1ncmlkKSwgdmFyKC0tc2l6ZSkpO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcblxyXG4uZmllbGRfX2l0ZW0ge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBmb250LXdlaWdodDogODAwO1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICMwMDA7XHJcbiAgY29sb3I6ICMwMDAwMDA7XHJcbn1cclxuXHJcbi5maWVsZF9faXRlbS5zdGFydHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiBncmVlbjtcclxufVxyXG5cclxuLmZpZWxkX19pdGVtLmVuZHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XHJcbn1cclxuXHJcbi5maWVsZF9fcG9pbnQge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICB3aWR0aDogMzBweDtcclxuICBoZWlnaHQ6IDMwcHg7XHJcbiAgdHJhbnNpdGlvbjogLXdlYmtpdC10cmFuc2Zvcm0gMXMgbGluZWFyO1xyXG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAxcyBsaW5lYXI7XHJcbiAgdHJhbnNmb3JtOiB2YXIoLS10cmFuc2Zvcm0pO1xyXG4gIGJvcmRlci1yYWRpdXM6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmViZWNjYXB1cnBsZTtcclxufVxyXG5cclxuLmZpZWxkX19wb2ludDphZnRlciB7XHJcbiAgY29udGVudDogXCJcIjtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgd2lkdGg6IDA7XHJcbiAgaGVpZ2h0OiAwO1xyXG4gIHRvcDogLTE4cHg7XHJcbiAgbGVmdDogNTAlO1xyXG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcclxuICBib3JkZXI6IDE1cHggc29saWQgdHJhbnNwYXJlbnQ7XHJcbiAgYm9yZGVyLWJvdHRvbS1jb2xvcjogcmViZWNjYXB1cnBsZTtcclxufVxyXG4iXX0= */"
+module.exports = ":root {\r\n  --grid: 3;\r\n  --size: 80px;\r\n  --transform: translate(0);\r\n}\r\n\r\nlabel{\r\n  color: rebeccapurple;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n.center{\r\n  position: relative;\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n}\r\n\r\n.show{\r\n  font-size: 18px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.wrapper{\r\n  display: -webkit-box;\r\n  display: flex;\r\n  padding-top: 50px;\r\n  margin-left: -20px;\r\n}\r\n\r\n.wrapper__item{\r\n  margin-left: 20px;\r\n}\r\n\r\n.field {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.field__row {\r\n  display: grid;\r\n  max-width: 500px;\r\n  grid-template-columns: repeat(var(--grid), var(--size));\r\n  grid-template-rows: repeat(var(--grid), var(--size));\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  border: 1px solid #000;\r\n}\r\n\r\n.field__item {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  font-weight: 800;\r\n  border: 1px solid #000;\r\n  color: #000000;\r\n}\r\n\r\n.field__item.start{\r\n  background-color: green;\r\n}\r\n\r\n.field__item.end{\r\n  background-color: red;\r\n}\r\n\r\n.field__point {\r\n  position: relative;\r\n  width: 30px;\r\n  height: 30px;\r\n  transition: -webkit-transform 1s linear;\r\n  -webkit-transition: -webkit-transform 1s linear;\r\n  transition: transform 1s linear;\r\n  transition: transform 1s linear, -webkit-transform 1s linear;\r\n  -webkit-transform: var(--transform);\r\n          transform: var(--transform);\r\n  border-radius: 100%;\r\n  background-color: rebeccapurple;\r\n}\r\n\r\n.field__point:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  display: block;\r\n  width: 0;\r\n  height: 0;\r\n  top: -18px;\r\n  left: 50%;\r\n  -webkit-transform: translateX(-50%);\r\n          transform: translateX(-50%);\r\n  border: 15px solid transparent;\r\n  border-bottom-color: rebeccapurple;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1QsWUFBWTtFQUNaLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLG9CQUFvQjtBQUN0Qjs7QUFFQTs7RUFFRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQWE7RUFBYixhQUFhO0VBQ2Isd0JBQXVCO1VBQXZCLHVCQUF1QjtFQUN2Qiw0QkFBc0I7RUFBdEIsNkJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0Qix5QkFBbUI7VUFBbkIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLG9CQUFhO0VBQWIsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxvQkFBYTtFQUFiLGFBQWE7RUFDYix3QkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLHlCQUFtQjtVQUFuQixtQkFBbUI7RUFDbkIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLGdCQUFnQjtFQUNoQix1REFBdUQ7RUFDdkQsb0RBQW9EO0VBQ3BELHdCQUF1QjtVQUF2Qix1QkFBdUI7RUFDdkIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0Usb0JBQWE7RUFBYixhQUFhO0VBQ2Isd0JBQXVCO1VBQXZCLHVCQUF1QjtFQUN2Qix5QkFBbUI7VUFBbkIsbUJBQW1CO0VBQ25CLGdCQUFnQjtFQUNoQixzQkFBc0I7RUFDdEIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHVCQUF1QjtBQUN6Qjs7QUFFQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsWUFBWTtFQUNaLHVDQUF1QztFQUN2QywrQ0FBK0I7RUFBL0IsK0JBQStCO0VBQS9CLDREQUErQjtFQUMvQixtQ0FBMkI7VUFBM0IsMkJBQTJCO0VBQzNCLG1CQUFtQjtFQUNuQiwrQkFBK0I7QUFDakM7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCxRQUFRO0VBQ1IsU0FBUztFQUNULFVBQVU7RUFDVixTQUFTO0VBQ1QsbUNBQTJCO1VBQTNCLDJCQUEyQjtFQUMzQiw4QkFBOEI7RUFDOUIsa0NBQWtDO0FBQ3BDIiwiZmlsZSI6InNyYy9hcHAvZ2FtZS9nYW1lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6cm9vdCB7XHJcbiAgLS1ncmlkOiAzO1xyXG4gIC0tc2l6ZTogODBweDtcclxuICAtLXRyYW5zZm9ybTogdHJhbnNsYXRlKDApO1xyXG59XHJcblxyXG5sYWJlbHtcclxuICBjb2xvcjogcmViZWNjYXB1cnBsZTtcclxufVxyXG5cclxuaHRtbCxcclxuYm9keSB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4uY2VudGVye1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxufVxyXG5cclxuLnNob3d7XHJcbiAgZm9udC1zaXplOiAxOHB4O1xyXG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbn1cclxuXHJcbi53cmFwcGVye1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgcGFkZGluZy10b3A6IDUwcHg7XHJcbiAgbWFyZ2luLWxlZnQ6IC0yMHB4O1xyXG59XHJcblxyXG4ud3JhcHBlcl9faXRlbXtcclxuICBtYXJnaW4tbGVmdDogMjBweDtcclxufVxyXG5cclxuLmZpZWxkIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxufVxyXG5cclxuLmZpZWxkX19yb3cge1xyXG4gIGRpc3BsYXk6IGdyaWQ7XHJcbiAgbWF4LXdpZHRoOiA1MDBweDtcclxuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCh2YXIoLS1ncmlkKSwgdmFyKC0tc2l6ZSkpO1xyXG4gIGdyaWQtdGVtcGxhdGUtcm93czogcmVwZWF0KHZhcigtLWdyaWQpLCB2YXIoLS1zaXplKSk7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgIzAwMDtcclxufVxyXG5cclxuLmZpZWxkX19pdGVtIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgZm9udC13ZWlnaHQ6IDgwMDtcclxuICBib3JkZXI6IDFweCBzb2xpZCAjMDAwO1xyXG4gIGNvbG9yOiAjMDAwMDAwO1xyXG59XHJcblxyXG4uZmllbGRfX2l0ZW0uc3RhcnR7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47XHJcbn1cclxuXHJcbi5maWVsZF9faXRlbS5lbmR7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmVkO1xyXG59XHJcblxyXG4uZmllbGRfX3BvaW50IHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgd2lkdGg6IDMwcHg7XHJcbiAgaGVpZ2h0OiAzMHB4O1xyXG4gIHRyYW5zaXRpb246IC13ZWJraXQtdHJhbnNmb3JtIDFzIGxpbmVhcjtcclxuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMXMgbGluZWFyO1xyXG4gIHRyYW5zZm9ybTogdmFyKC0tdHJhbnNmb3JtKTtcclxuICBib3JkZXItcmFkaXVzOiAxMDAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJlYmVjY2FwdXJwbGU7XHJcbn1cclxuXHJcbi5maWVsZF9fcG9pbnQ6YWZ0ZXIge1xyXG4gIGNvbnRlbnQ6IFwiXCI7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIHdpZHRoOiAwO1xyXG4gIGhlaWdodDogMDtcclxuICB0b3A6IC0xOHB4O1xyXG4gIGxlZnQ6IDUwJTtcclxuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSk7XHJcbiAgYm9yZGVyOiAxNXB4IHNvbGlkIHRyYW5zcGFyZW50O1xyXG4gIGJvcmRlci1ib3R0b20tY29sb3I6IHJlYmVjY2FwdXJwbGU7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -317,14 +317,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
+var myInt = null;
 var GameComponent = /** @class */ (function () {
     function GameComponent(renderer) {
         this.renderer = renderer;
-        this.mySize = 4;
+        this.mySize = 3;
         this.myCount = 10;
     }
     GameComponent.prototype.setField = function () {
-        document.documentElement.style.setProperty("--transform", 'translateX(0) translateY(0)');
+        document.documentElement.style.setProperty("--transform", 'translateX(0) translateY(0) ');
         var field = document.querySelector('.field');
         var rend = this.renderer;
         var fieldRow = rend.createElement('div');
@@ -333,7 +334,7 @@ var GameComponent = /** @class */ (function () {
         document.documentElement.style.setProperty('--size', '80px');
         var size = document.documentElement.style.getPropertyValue('--size');
         function getCommands(fieldLength, power) {
-            var fieldLengthLength = Math.sqrt(fieldLength.length);
+            var fieldLengthLength = Math.floor(Math.sqrt(fieldLength.length));
             document.documentElement.style.setProperty("--grid", "" + fieldLengthLength);
             var fragment = document.createDocumentFragment();
             for (var i = 0; i < fieldLength.length; i++) {
@@ -487,33 +488,46 @@ var GameComponent = /** @class */ (function () {
             for (var i = 0; i < length; i++) {
                 myArray.push('.');
             }
-            var randomStart = getRandomInt(0, length);
+            var randomStart = getRandomInt(0, length - 1);
             var randomEnd = null;
             myArray[randomStart] = 'S';
             function getRandomEnd() {
-                var randomEndInner = getRandomInt(0, length);
+                var randomEndInner = getRandomInt(0, length - 1);
                 if (randomStart === randomEndInner) {
                     randomEndInner = getRandomEnd();
                 }
                 return randomEndInner;
             }
             function getRandomWall() {
-                var randomWallInner = getRandomInt(0, length);
+                var randomWallInner = getRandomInt(0, length - 1);
                 if (randomStart === randomWallInner || randomEnd === randomWallInner) {
                     randomWallInner = getRandomWall();
                 }
                 return randomWallInner;
             }
+            function getRandomWallOther() {
+                var randomWallInnerOther = getRandomInt(0, length - 1);
+                if (randomStart === randomWallInnerOther || randomEnd === randomWallInnerOther || randomWall === randomWallInnerOther) {
+                    randomWallInnerOther = getRandomWallOther();
+                }
+                return randomWallInnerOther;
+            }
             randomEnd = getRandomEnd();
             var randomWall = getRandomWall();
             myArray[randomEnd] = 'T';
             myArray[randomWall] = '#';
+            if (length > 9) {
+                var randomWallOther = getRandomWallOther();
+                var randomWallAnother = getRandomWallOther();
+                myArray[randomWallOther] = '#';
+                myArray[randomWallAnother] = '#';
+            }
             return myArray.join('');
         }
         var que = setString(this.mySize);
         var score = getCommands(que, this.myCount);
         if (!score.length) {
-            document.querySelector('.show').textContent = "\u0425\u043E\u0434\u043E\u0432 \u043D\u0435 \u0437\u0432\u0430\u0442\u0438\u043B\u043E, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0437\u0430\u0434\u0430\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0435";
+            document.querySelector('.show').textContent = "\u0425\u043E\u0434\u043E\u0432 \u043D\u0435 \u0445\u0432\u0430\u0442\u0438\u043B\u043E, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0437\u0430\u0434\u0430\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0435";
         }
         else {
             document.querySelector('.show').textContent = "" + score;
@@ -545,14 +559,16 @@ var GameComponent = /** @class */ (function () {
                 }
             }
         }
-        setInterval(setTime, 1000);
+        myInt = setInterval(setTime, 1000);
     };
     GameComponent.prototype.myClick = function () {
+        clearInterval(myInt);
         if (document.getElementsByClassName('field')[0].textContent === '') {
             this.setField();
         }
         else {
             var fi = document.querySelector('.field');
+            document.querySelector(".field__point").remove();
             fi.textContent = '';
             this.setField();
         }
