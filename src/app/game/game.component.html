@@ -1,17 +1,16 @@
-<div class="center">
+<form class="center">
   <div class="wrapper">
     <div class="wrapper__item">
       <label for="size">Введите размер поля</label>
-      <input type="number" min="2" [(ngModel)]="mySize" id="size">
+      <input type="number" min="2" name="size" [(ngModel)]="mySize" id="size">
     </div>
     <div class="wrapper__item">
       <label for="count">Введите количество ходов</label>
-      <input type="number" min="1" [(ngModel)]="myCount" id="count">
+      <input type="number" min="1" name="count" [(ngModel)]="myCount" id="count">
     </div>
   </div>
   <button class="button" (click)="myClick()">Начать игру</button>
   <div class="show"></div>
-</div>
-
+</form>
 <div class="field"></div>
 
