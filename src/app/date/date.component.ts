@@ -11,7 +11,8 @@ export class DateComponent implements OnInit {
   items = ['Angular', 'React', 'Vue.js', 'Bootstrap'];
   loggedIn = true;
   loggedout = 'login';
-  text: string = 'a table';
+  text = 'a table';
+  title = 'date';
 
   constructor(svc: NewServiceService) {
     svc.consoleText('text from service');
@@ -22,7 +23,7 @@ export class DateComponent implements OnInit {
     setInterval(setTime, 1000);
   }
 
-  myEvent(event) {
+  myEvent() {
     console.log(this.text);
   }
 
