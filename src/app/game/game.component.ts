@@ -1,19 +1,21 @@
 import {Component, OnInit, Renderer2} from '@angular/core';
 
+let myInt = null;
+
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  mySize = 4;
+  mySize = 3;
   myCount = 10;
 
   constructor(private renderer: Renderer2) {
   }
 
   setField() {
-    document.documentElement.style.setProperty(`--transform`, 'translateX(0) translateY(0)');
+    document.documentElement.style.setProperty(`--transform`, 'translateX(0) translateY(0) ');
     const field = document.querySelector('.field');
     const rend = this.renderer;
     const fieldRow = rend.createElement('div');
@@ -23,7 +25,7 @@ export class GameComponent implements OnInit {
     const size = document.documentElement.style.getPropertyValue('--size');
 
     function getCommands(fieldLength, power) {
-      const fieldLengthLength = Math.sqrt(fieldLength.length);
+      const fieldLengthLength = Math.floor(Math.sqrt(fieldLength.length));
       document.documentElement.style.setProperty(`--grid`, `${fieldLengthLength}`);
       const fragment = document.createDocumentFragment();
       for (let i = 0; i < fieldLength.length; i++) {
@@ -179,19 +181,18 @@ export class GameComponent implements OnInit {
 
     function setString(numb) {
       const length = Math.pow(numb, 2);
-
       const myArray = [];
 
       for (let i = 0; i < length; i++) {
         myArray.push('.');
       }
-      const randomStart = getRandomInt(0, length);
+      const randomStart = getRandomInt(0, length - 1);
       let randomEnd = null;
 
       myArray[randomStart] = 'S';
 
       function getRandomEnd() {
-        let randomEndInner = getRandomInt(0, length);
+        let randomEndInner = getRandomInt(0, length - 1);
         if (randomStart === randomEndInner) {
           randomEndInner = getRandomEnd();
         }
@@ -199,24 +200,40 @@ export class GameComponent implements OnInit {
       }
 
       function getRandomWall() {
-        let randomWallInner = getRandomInt(0, length);
+        let randomWallInner = getRandomInt(0, length - 1);
         if (randomStart === randomWallInner || randomEnd === randomWallInner) {
           randomWallInner = getRandomWall();
         }
         return randomWallInner;
       }
 
+      function getRandomWallOther() {
+        let randomWallInnerOther = getRandomInt(0, length - 1);
+        if (randomStart === randomWallInnerOther || randomEnd === randomWallInnerOther || randomWall === randomWallInnerOther) {
+          randomWallInnerOther = getRandomWallOther();
+        }
+        return randomWallInnerOther;
+      }
+
       randomEnd = getRandomEnd();
       const randomWall = getRandomWall();
       myArray[randomEnd] = 'T';
       myArray[randomWall] = '#';
+
+      if (length > 9) {
+        const randomWallOther = getRandomWallOther();
+        const randomWallAnother = getRandomWallOther();
+        myArray[randomWallOther] = '#';
+        myArray[randomWallAnother] = '#';
+      }
+
       return myArray.join('');
     }
 
     const que = setString(this.mySize);
     const score = getCommands(que, this.myCount);
     if (!score.length) {
-      document.querySelector('.show').textContent = `Ходов не зватило, попробуйте задать больше`;
+      document.querySelector('.show').textContent = `Ходов не хватило, попробуйте задать больше`;
     } else {
       document.querySelector('.show').textContent = `${score}`;
     }
@@ -249,18 +266,18 @@ export class GameComponent implements OnInit {
         }
       }
 
-
     }
 
-    setInterval(setTime, 1000);
+    myInt = setInterval(setTime, 1000);
   }
 
   myClick() {
-
+    clearInterval(myInt);
     if (document.getElementsByClassName('field')[0].textContent === '') {
       this.setField();
     } else {
       const fi = document.querySelector('.field');
+      document.querySelector(`.field__point`).remove();
       fi.textContent = '';
       this.setField();
     }

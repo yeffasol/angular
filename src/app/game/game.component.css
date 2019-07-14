@@ -45,10 +45,11 @@ body {
 
 .field__row {
   display: grid;
-  width: 500px;
+  max-width: 500px;
   grid-template-columns: repeat(var(--grid), var(--size));
   grid-template-rows: repeat(var(--grid), var(--size));
   justify-content: center;
+  border: 1px solid #000;
 }
 
 .field__item {
