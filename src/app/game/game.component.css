@@ -1,6 +1,6 @@
 :root {
   --grid: 3;
-  --size: 100px;
+  --size: 80px;
   --transform: translate(0);
 }
 
@@ -13,8 +13,30 @@ body {
   height: 100%;
 }
 
+.center{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.wrapper{
+  display: flex;
+  padding-top: 50px;
+  margin-left: -20px;
+}
+
+.wrapper__item{
+  margin-left: 20px;
+}
+
 .field {
-  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,9 +45,10 @@ body {
 
 .field__row {
   display: grid;
+  width: 500px;
   grid-template-columns: repeat(var(--grid), var(--size));
   grid-template-rows: repeat(var(--grid), var(--size));
-  border: 1px solid #000;
+  justify-content: center;
 }
 
 .field__item {
@@ -34,6 +57,7 @@ body {
   align-items: center;
   font-weight: 800;
   border: 1px solid #000;
+  color: #000000;
 }
 
 .field__item.start{

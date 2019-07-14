@@ -7,18 +7,19 @@ import {Component, OnInit, Renderer2} from '@angular/core';
 })
 export class GameComponent implements OnInit {
   mySize = 4;
+  myCount = 10;
 
   constructor(private renderer: Renderer2) {
   }
 
-  myClick() {
-
+  setField() {
+    document.documentElement.style.setProperty(`--transform`, 'translateX(0) translateY(0)');
     const field = document.querySelector('.field');
     const rend = this.renderer;
     const fieldRow = rend.createElement('div');
     fieldRow.classList.add('field__row');
     field.appendChild(fieldRow);
-    document.documentElement.style.setProperty('--size', '100px');
+    document.documentElement.style.setProperty('--size', '80px');
     const size = document.documentElement.style.getPropertyValue('--size');
 
     function getCommands(fieldLength, power) {
@@ -213,9 +214,12 @@ export class GameComponent implements OnInit {
     }
 
     const que = setString(this.mySize);
-    const score = getCommands(que, 20);
-    console.log(score);
-    document.querySelector('.show').textContent = `${score}`;
+    const score = getCommands(que, this.myCount);
+    if (!score.length) {
+      document.querySelector('.show').textContent = `Ходов не зватило, попробуйте задать больше`;
+    } else {
+      document.querySelector('.show').textContent = `${score}`;
+    }
     const direction = 'Y';
     const newQue = score.slice();
 
@@ -249,6 +253,18 @@ export class GameComponent implements OnInit {
     }
 
     setInterval(setTime, 1000);
+  }
+
+  myClick() {
+
+    if (document.getElementsByClassName('field')[0].textContent === '') {
+      this.setField();
+    } else {
+      const fi = document.querySelector('.field');
+      fi.textContent = '';
+      this.setField();
+    }
+
   }
 
   ngOnInit() {
