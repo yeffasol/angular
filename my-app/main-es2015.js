@@ -63,7 +63,7 @@ module.exports = "<div class=\"field\"></div>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"center\">\n  <div class=\"wrapper\">\n    <div class=\"wrapper__item\">\n      <label for=\"size\">Введите размер поля</label>\n      <input type=\"number\" min=\"2\" [(ngModel)]=\"mySize\" id=\"size\">\n    </div>\n    <div class=\"wrapper__item\">\n      <label for=\"count\">Введите количество ходов</label>\n      <input type=\"number\" min=\"1\" [(ngModel)]=\"myCount\" id=\"count\">\n    </div>\n  </div>\n  <button class=\"button\" (click)=\"myClick()\">Начать игру</button>\n  <div class=\"show\"></div>\n</div>\n\n<div class=\"field\"></div>\n\n"
+module.exports = "<form class=\"center\">\n  <div class=\"wrapper\">\n    <div class=\"wrapper__item\">\n      <label for=\"size\">Введите размер поля</label>\n      <input type=\"number\" min=\"2\" name=\"size\" [(ngModel)]=\"mySize\" id=\"size\">\n    </div>\n    <div class=\"wrapper__item\">\n      <label for=\"count\">Введите количество ходов</label>\n      <input type=\"number\" min=\"1\" name=\"count\" [(ngModel)]=\"myCount\" id=\"count\">\n    </div>\n  </div>\n  <button class=\"button\" (click)=\"myClick()\">Начать игру</button>\n  <div class=\"show\"></div>\n</form>\n<div class=\"field\"></div>\n\n"
 
 /***/ }),
 
