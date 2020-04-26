@@ -1,4 +1,4 @@
-https://yeffasol.github.io/angular/my-app/
+https://some-yummy-nick.github.io/angular/my-app/
 
 Сделать страницу с формой для ввода поля и энергии,
 
